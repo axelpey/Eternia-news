@@ -11,6 +11,12 @@
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
     </dependency>
+    <dependency>
+      <groupId>net.licks92</groupId>
+      <artifactId>EterniaCore</artifactId>
+      <version>${project.version}</version>
+      <type>jar</type>
+    </dependency>
   </dependencies>
   
   <repositories>

@@ -1,19 +1,19 @@
 package net.licks92.EterniaNews;
 
-import java.util.logging.Logger;
-
 import org.bukkit.Bukkit;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class EterniaNews extends JavaPlugin
+import net.licks92.EterniaCore.Plugin.EterniaPlugin;
+
+public class EterniaNews extends EterniaPlugin
 {
-	Logger logger;
-	
 	@Override
 	public void onEnable()
 	{
-		logger = Bukkit.getLogger();
-		logger.info("EterniaNews en cours de chargement");
+		if(!this.linkToCore(this.getName()))
+		{
+			Bukkit.getLogger().severe("Le plugin n'a pas pu se connecter au core Eternia et ne peut donc pas fonctionner.");
+		}
+		log.info("Le plugin s'est bien connecté au core Eternia!");
 	}
 	
 	@Override
